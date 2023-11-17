@@ -1,4 +1,4 @@
-import turtle
+import time
 from turtle import *
 pensize(5)
 def curve():
@@ -21,3 +21,4 @@ speed(1)
 
 forward(130)
 end_fill()
+time.sleep(1)

@@ -18,4 +18,4 @@ for j in range(2):
     forward(50)
     right(90)
 
-time.sleep(3)
+time.sleep(1)

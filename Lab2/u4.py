@@ -6,14 +6,14 @@ def schlussel(list):
         number=list[0]
         list.pop(0)
         for j in range(len(list)):
-            list[j] = list[j] + number
-        v.append(list)
+            x = list[j] + number
+            v.append(x)
         for m in range(len(list)):
-            list[m] = list[m] * number
-        b.append(list)
+            y = list[m] * number
+            b.append(y)
         for n in range(len(list)):
-            list[n] = list[n] ^ number
-        c.append(list)
+            z = list[n] ^ number
+            c.append(z)
         return ' + ',v, ' * ',b, ' ^ ', c
 
 sor=[10,23,56,11,90]

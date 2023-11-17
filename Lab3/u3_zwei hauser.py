@@ -1,4 +1,5 @@
 from turtle import *
+import time
 
 def curve2():
     for i in range(180):
@@ -90,4 +91,4 @@ penup()
 goto(170, 45)       #upper window
 pendown()
 circle(30)
-
+time.sleep(3)

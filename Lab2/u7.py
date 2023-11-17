@@ -1,6 +1,6 @@
 def kgf(list):
     k = list[0]
-    for i in range(1, len(list)):
+    for i in range(1, len(list)-1):
         a = k
         b = list[i]
         lnko = 1

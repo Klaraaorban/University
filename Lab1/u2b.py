@@ -1,32 +1,37 @@
-def relativ_prim(a,b):
-    m=min(a,b)
-    for i in range(1,m+1):
-        if a%i==0 and b%i==0:
-            count=i
-    if count==1:
-        return True
-    return False
+def rel_prim(num):
+    l = []
+    if num == 1:
+        return [1]
+    else:
+        for oszt in range(2, num + 1):
+            if num % oszt == 0:
+                l.append(oszt)
+    return l
 
-num=0
-count=0
 
-def rel_Teilfolge(list):
-    list.sort()
-    v=[]
-    v.append(list[0])
-    for i in range(1,len(list)):
-        if(relativ_prim(list[i],list[i+1])):
-            v.append(list[i])
-
-    for i in range(1,len(v)):
-        if(i>0 and relativ_prim(v[i],v[i-1])):
-            count+=1
+def teilfolge(liste):
+    l = []
+    max_l = []
+    longest = liste[0]
+    for i in liste[1:]:
+        con = True
+        longest_last = rel_prim(longest)
+        longest_now = rel_prim(i)
+        if l == []:
+            l.append(longest)
+        for j in longest_last:
+            if j in longest_now:
+                con = False
+        if con == True:
+            l.append(i)
         else:
-            count=1
-            num=max(num,count)
-    return num
+            l = []
+        if len(l) > len(max_l):
+            max_l = l
+        longest = i
+    return max_l
 
-list=[2,3,7,10]
-print(rel_Teilfolge)
 
 
+sor = [1, 2, 3, 4, 5, 6, 12, 1, 2]
+print(teilfolge(sor))
