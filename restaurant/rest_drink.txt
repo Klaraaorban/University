@@ -1,0 +1,5 @@
+1: Cola,6
+2: Sprite,6
+3: Coffee,7
+4: Water,3
+5: Iced tea,12
