@@ -1,0 +1,3 @@
+C:/Project_uni/sem2/k_oop/L4_Orban_Klara/cmake-build-debug/CMakeFiles/L4_Orban_Klara.dir
+C:/Project_uni/sem2/k_oop/L4_Orban_Klara/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Project_uni/sem2/k_oop/L4_Orban_Klara/cmake-build-debug/CMakeFiles/rebuild_cache.dir
