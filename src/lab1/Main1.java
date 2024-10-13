@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main1 {
     public static void main(String[] args) {
-        /*
+
         //Aufgabe 1
         int[] note = {29, 37, 38, 41, 84, 67, 68};
         Note noteCalc = new Note(note);
@@ -15,9 +15,9 @@ public class Main1 {
 
         System.out.println("Abgerundete Note: " + noteCalc.abgerundeteNote());
 
-        System.out.println("Maximal Abgerundete Note: " + noteCalc.maxAbgerundeteNote());*/
+        System.out.println("Maximal Abgerundete Note: " + noteCalc.maxAbgerundeteNote() + "\n");
 
-        /*
+
         //Aufgabe 2
         int[] numbers = {4, 8, 3, 10, 17};
         Zahlen nums = new Zahlen(numbers);
@@ -25,10 +25,10 @@ public class Main1 {
         System.out.println("Maximale Zahl: " + nums.maximale());
         System.out.println("Minimale Zahl: " + nums.minimale());
         System.out.println("Maximale summe von n-1 Zahlen: " + nums.maximalSum());
-        System.out.println("Minimale summe von n-1 Zahlen: " + nums.minimalSum()); */
+        System.out.println("Minimale summe von n-1 Zahlen: " + nums.minimalSum() + "\n");
+
 
         //Aufgabe 3
-
         int[] num1 = {1,3,0,0,0,0,0,0,1};
         int[] num2 = {8,7,0,0,0,0,0,0,0};
         GrosseZahlen number = new GrosseZahlen(num1, num2);
@@ -39,7 +39,23 @@ public class Main1 {
 
         System.out.println("Multiplikation: " + Arrays.toString(number.mulGrosseZahl(num1, 100)));
 
-        System.out.println("Division: " + Arrays.toString(number.divGrosseZahl(num2, 10)));
+        System.out.println("Division: " + Arrays.toString(number.divGrosseZahl(num2, 10)) + "\n");
 
+
+        //Aufgabe 4
+        int[] tastatur = {40, 35, 70, 15, 45};
+        int[] usb = {20, 15, 40, 14};
+        ElektronikShop elems = new ElektronikShop(tastatur, usb);
+
+        System.out.println("Billigste Tastatur Preise: " + elems.billigsteTastatur(tastatur));
+
+        System.out.println("Teuresten Gegenstand: " + elems.teuresteGegenstand(tastatur, usb));
+
+        System.out.println("Teureste USB Laufwerk in Budget: " + elems.budgetUSB(usb, 30));
+
+        int[] tast = {40, 60};
+        int[] usb2 = {8, 12};
+
+        System.out.println("Maximal Geldbetrag: " + elems.maximalGeldbetrag(tast, usb2, 60));
     }
 }
