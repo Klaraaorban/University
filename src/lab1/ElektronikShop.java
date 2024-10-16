@@ -1,13 +1,6 @@
 package lab1;
 
 public class ElektronikShop {
-    int[] tastatur_preis;
-    int[] USB_laufwerk;
-
-    public ElektronikShop(int[] tastatur, int[] usb) {
-        this.tastatur_preis = tastatur;
-        this.USB_laufwerk = usb;
-    }
 
     public int billigsteTastatur(int[] tastatur_preis){
         int minimal = tastatur_preis[0];

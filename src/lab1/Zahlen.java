@@ -1,8 +1,5 @@
 package lab1;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Zahlen {
     public int[] posZahlen;
 
@@ -35,7 +32,7 @@ public class Zahlen {
         for(int i: posZahlen){
             maxSum += i;
         }
-        int smallest = Arrays.stream(posZahlen).min().getAsInt();
+        int smallest = minimale();
         return maxSum - smallest;
     }
 
@@ -44,7 +41,7 @@ public class Zahlen {
         for(int i: posZahlen){
             minSum += i;
         }
-        int biggest = Arrays.stream(posZahlen).max().getAsInt();
+        int biggest = maximale();
         return minSum - biggest;
     }
 

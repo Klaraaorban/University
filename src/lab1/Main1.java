@@ -7,15 +7,21 @@ public class Main1 {
 
         //Aufgabe 1
         int[] note = {29, 37, 38, 41, 84, 67, 68};
-        Note noteCalc = new Note(note);
+        Note noteCalc = new Note();
 
-        System.out.println("Nicht ausreichender Note: " + noteCalc.nichtAusreichenderNote());
+        System.out.print("Nicht ausreichender Note: ");
+        for (int i : noteCalc.nichtAusreichenderNote(note)) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+        System.out.println("Durchschnittswert: " + noteCalc.durchschnittsWert(note));
 
-        System.out.println("Durchschnittswert: "+ noteCalc.durchschnittsWert());
-
-        System.out.println("Abgerundete Note: " + noteCalc.abgerundeteNote());
-
-        System.out.println("Maximal Abgerundete Note: " + noteCalc.maxAbgerundeteNote() + "\n");
+        System.out.print("Abgerundete Note: ");
+        for (int i : noteCalc.abgerundeteNote(note)) {
+            System.out.print(i + ", ");
+        }
+        System.out.println();
+        System.out.print("Maximal Abgerundete Note: " + noteCalc.maxAbgerundeteNote(note) + "\n");
 
 
         //Aufgabe 2
@@ -29,15 +35,15 @@ public class Main1 {
 
 
         //Aufgabe 3
-        int[] num1 = {1,3,0,0,0,0,0,0,1};
-        int[] num2 = {8,7,0,0,0,0,0,0,0};
+        int[] num1 = {1, 3, 0, 0, 0, 0, 0, 0, 1};
+        int[] num2 = {8, 6, 0, 0, 0, 0, 0, 0, 0};
         GrosseZahlen number = new GrosseZahlen(num1, num2);
 
         System.out.println("Summe: " + Arrays.toString(number.addGrosseZahlen(num1, num2)));
 
         System.out.println("Differenz: " + Arrays.toString(number.diffGrosseZahlen(num1, num2)));
 
-        System.out.println("Multiplikation: " + Arrays.toString(number.mulGrosseZahl(num1, 100)));
+        System.out.println("Multiplikation: " + Arrays.toString(number.mulGrosseZahl(num1, 2)));
 
         System.out.println("Division: " + Arrays.toString(number.divGrosseZahl(num2, 10)) + "\n");
 
@@ -45,7 +51,7 @@ public class Main1 {
         //Aufgabe 4
         int[] tastatur = {40, 35, 70, 15, 45};
         int[] usb = {20, 15, 40, 14};
-        ElektronikShop elems = new ElektronikShop(tastatur, usb);
+        ElektronikShop elems = new ElektronikShop();
 
         System.out.println("Billigste Tastatur Preise: " + elems.billigsteTastatur(tastatur));
 

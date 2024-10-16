@@ -1,24 +1,26 @@
 package lab1;
-import java.util.ArrayList;
 
 public class Note {
-    public int[] note;
 
-    public Note(int[] noten) {
-        this.note = noten;
-    }
-
-    public ArrayList<Integer> nichtAusreichenderNote(){
-        ArrayList<Integer> nichtAusreichender = new ArrayList<>();
+    public int[] nichtAusreichenderNote(int[] note){
+        int count = 0;
         for(int n : note){
             if(n < 40){
-                nichtAusreichender.add(n);
+                count++;
+            }
+        }
+        int[] nichtAusreichender = new int[count];
+        int i = 0;
+        for(int n: note){
+            if(n<40){
+                nichtAusreichender[i] = n;
+                i++;
             }
         }
         return nichtAusreichender;
     }
 
-    public double durchschnittsWert(){
+    public double durchschnittsWert(int[] note){
         int count = 0;
         for(int n : note){
             count += n;
@@ -26,28 +28,28 @@ public class Note {
         return (double) count / note.length;
     }
 
-    public ArrayList<Integer> abgerundeteNote(){
-        ArrayList<Integer> abgerundet = new ArrayList<>();
-        for(int n: note){
-            if(n < 40){
-                abgerundet.add(n);
+    public int[] abgerundeteNote(int[] note){
+        int[] abgerundet = new int[note.length];
+        for(int i = 0; i<=note.length - 1; i++){
+            if(note[i] < 38){
+                abgerundet[i] = note[i];
             }
             else{
-                int vielfachen5 = (n+4) / 5 * 5;
-                if(vielfachen5 - n < 3){
-                    abgerundet.add(vielfachen5);
+                int vielfachen5 = (note[i]+4) / 5 * 5;
+                if(vielfachen5 - note[i] < 3){
+                    abgerundet[i] = vielfachen5;
                 }
                 else{
-                    abgerundet.add(n);
+                    abgerundet[i] = note[i];
                 }
             }
         }
         return abgerundet;
     }
 
-    public int maxAbgerundeteNote(){
-        ArrayList<Integer> abgerundet = abgerundeteNote();
-        int maxNote = abgerundet.get(0);
+    public int maxAbgerundeteNote(int[] note){
+        int[] abgerundet = abgerundeteNote(note);
+        int maxNote = abgerundet[0];
         for(int n : abgerundet){
             if(n > maxNote){
                 maxNote = n;

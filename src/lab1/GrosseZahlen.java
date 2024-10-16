@@ -19,6 +19,7 @@ public class GrosseZahlen {
         else if (num2.length < num1.length){
             num2 = fillZero(num2, num1.length);
         }
+
         int n = num1.length;
         int[] suma = new int[n+1];
         int flag = 0;
