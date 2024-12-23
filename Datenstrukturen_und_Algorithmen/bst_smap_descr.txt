@@ -1,0 +1,37 @@
+descr: inorder traversare a unui container
+best case: 	theta(1)
+worst case:	theta(log n)
+average case:	theta(n)
+inorder_travelsal(current_node, Telem* elem, idx)
+	inorder_travelsal(left[current], elem, idx)
+	elem[idx++] = info[current]
+	inorder_travelsal(right[current], elem, idx);
+end of function
+
+descr: comparitia cele doua containere
+pre: two containers, two empty arrays
+post: traversam ambele containere inorder si salvam elementele intrun array
+best case: 	theta(1)
+worst case:	theta(log n)
+average case:	theta(n)
+bool operator==(SM& container)
+	if(size != container.size)
+		return false
+	new elem1
+	new elem2
+	idx1 <- 0
+	idx2 <- 0
+	
+	inorder_travelsal(root, elem1, idx1)
+	container.inorder_travelsal(container->root, elem2, idx2)
+	egal = true
+	
+	for i <-0, i<size:
+		if(elem1[i] not elem2[i])
+			egal = false
+			exit
+	end of for
+	delete elem1, elem2
+	
+	return egal
+end of function

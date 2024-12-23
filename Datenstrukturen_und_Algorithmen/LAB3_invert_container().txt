@@ -1,0 +1,9 @@
+funktion invert_container()
+	Node i <-head
+	node j<-nil
+	node current next <- nil
+	while i not NIL
+		current_next = i->next
+		j = i
+		i = current_next
+	i = j

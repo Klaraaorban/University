@@ -1,0 +1,23 @@
+ADT Set – repräsentiert mithilfe eines dynamischen Arrays von Elementen
+
+Best case: theta(1) - iterator already on the current element
+Average case: theta(1)
+Worst case: theta(1)
+Gesamt: theta(1)
+
+Precondition:
+	-valid iterator
+	-the iterator is positioned on the current element
+	-new_form is a correct number(>0)
+
+Postcondition:
+	-the current element of the set is "modified" into the new one
+
+Pseudocode:
+	function modifyCurrent(new_form)
+		if iterator not valid
+			throw exception
+		if new_form < 0
+			throw exception
+		new_form -> set.arr[current_position]
+	end - function

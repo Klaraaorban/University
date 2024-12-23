@@ -1,0 +1,33 @@
+3. ADT Bag – repräsentiert mithilfe einer SLLA von Paaren der Form (Element, Frequenz). 
+
+
+Pseudocode:
+functie invert()
+    if (head == -1)
+        throw exception
+	end-if
+	current<-head;
+	prev<- -1;
+	while (current != -1)
+		int next_element<-next[current]
+		next[current]<-prev
+		prev<-current;
+		current<-next_element;
+	end-while
+	head<-prev;
+end-functie
+
+Desc:
+-daca head este -1, se arunca o exceptie
+-se inverseaza next, astfel incat lista sa fie inversata
+
+Precondition:
+-Bag contine elems, head si next
+
+Postcondition:
+-inversam next
+-head indica spre ultimul element al listei
+
+Time complexity: BestCase: Theta(1)
+AvgCase: Theta(n) - Functia parcurge toata lista
+WorstCase: Theta(n) - Fiecare pointer next trebuie inversat

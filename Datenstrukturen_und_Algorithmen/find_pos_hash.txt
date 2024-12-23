@@ -1,0 +1,31 @@
+desc: 	- the function iterates trough the hashtabel
+	- if element is found then (i,j) are the positions of the given element
+	- otherwise: throw exception
+
+pre: 	- matrix exists
+	- i and j are integers which hold the positions of the element
+	- e is the element
+ 
+post: 	- if e found (i,j) are the positions
+	- if e found no throws
+
+best case: 	theta(1)
+average case: 	theta(n)
+worst case:	theta(n)
+gesamt:		O(n)
+
+function find_position(row, col, elem){
+	for k in capacity
+		current <- arr[k]
+		while current not NIL
+			if current.elem is elem
+				row = current.row
+				col = current.col
+				return row, col
+			end of if
+			current = current.next
+		end of while
+	end of for
+	
+	throw exception(if nothing is returned)
+}
