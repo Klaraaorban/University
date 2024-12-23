@@ -1,0 +1,10 @@
+Motherboard, 1, CPU
+Motherboard, 1, GPU
+Motherboard, 1, RAM
+Motherboard, 1, PSU
+Motherboard, 1, InDEV
+Motherboard, 1, OutDEV
+GPU, 2, PSU
+CPU, 3, SpecialDEV
+InDEV, 3, IOController
+OutDEV, 3, IOController
