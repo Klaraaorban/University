@@ -1,0 +1,9 @@
+1: Hamburger,10
+2: Pizza,25
+3: Soup,6
+4: Bolognese,17
+5: Shaorma,21
+6: Grapes,3
+7: Gnochi,48
+8: Chocolate Cake,56
+9: Pure,14
